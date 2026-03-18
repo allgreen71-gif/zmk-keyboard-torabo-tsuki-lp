@@ -21,6 +21,11 @@
     listeners = <&trackball_listener>;
 };
 
+&zip_temp_layer {
+    // 非マウスキーで即解除したくないキーだけを列挙（ここはあとで調整）
+    excluded-positions = <1 2 13 14 15 19 20 21 33 34 35>;
+};
+
 trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     device = <&pointing_device>;
