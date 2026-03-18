@@ -17,3 +17,16 @@
 &size_l_transform {
     col-offset = <7>;
 };
+
+&zip_temp_layer {
+    // 非マウスキーで即解除したくないキーだけを列挙（ここはあとで調整）
+    excluded-positions = <1 2 13 14 15 19 20 21 33 34 35>;
+};
+
+/ {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_sensor>;
+        input-processors = <&zip_temp_layer 1 5000>;
+    };
+};
