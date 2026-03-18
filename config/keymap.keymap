@@ -57,13 +57,13 @@
             >;
         };
 
-        layer_5 {
+        layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans         &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans         &trans          &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK     &mkp RCLK      &msc SCRL_UP    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LA(LEFT)  &kp RA(RIGHT)  &msc SCRL_DOWN  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans         &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans        &trans         &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK     &mkp RCLK      &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp RA(LEFT)  &kp RA(RIGHT)  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans        &trans         &trans  &trans  &trans
             >;
         };
     };
