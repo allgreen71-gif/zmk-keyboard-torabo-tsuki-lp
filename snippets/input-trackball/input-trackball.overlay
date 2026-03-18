@@ -17,14 +17,12 @@
     };
 };
 
-/* ★ 先に定義する */
 trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     device = <&pointing_device>;
     input-processors = <&zip_temp_layer 1 5000>;
 };
 
-/* ★ その後で参照する */
 &pointing_device {
     listeners = <&trackball_listener>;
 };
