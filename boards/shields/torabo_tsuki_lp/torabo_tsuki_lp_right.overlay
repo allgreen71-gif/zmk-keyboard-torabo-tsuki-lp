@@ -17,3 +17,12 @@
 &size_l_transform {
     col-offset = <7>;
 };
+
+/* --- AML（オートマウスレイヤー） --- */
+ / {
+    trackball_listener: trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball_sensor>;   // ← ここが重要
+        input-processors = <&zip_temp_layer 5 10000>;
+    };
+};
