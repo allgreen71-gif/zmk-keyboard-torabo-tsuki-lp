@@ -1,13 +1,6 @@
+#include "torabo_tsuki_lp.dtsi"
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
-
-/* --- ここで trackball_sensor を先に定義する --- */
-&spi0 {
-    trackball_sensor: paw3222@0 {
-        compatible = "pixart,paw3222";
-        reg = <0>;
-    };
-};
 
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
@@ -23,13 +16,4 @@
 
 &size_l_transform {
     col-offset = <7>;
-};
-
-/* --- AML（オートマウスレイヤー） --- */
- / {
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        device = <&trackball_sensor>;   // ← ここが重要
-        input-processors = <&zip_temp_layer 1 5000>;
-    };
 };
