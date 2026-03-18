@@ -22,10 +22,6 @@ trackball_listener: trackball_listener {
     input-processors = <&zip_temp_layer 1 5000>;
 };
 
-&zip_temp_layer {
-    excluded-positions = <1 2 13 14 15 19 20 21 33 34 35>;
-};
-
 &pointing_device {
     listeners = <&trackball_listener>;
 };
