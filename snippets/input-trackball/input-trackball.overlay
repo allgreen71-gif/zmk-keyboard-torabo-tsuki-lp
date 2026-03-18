@@ -17,7 +17,7 @@
     };
 };
 
-/* ★ 先に定義する！ */
+/* ★ 先に定義する */
 trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     device = <&pointing_device>;
@@ -29,6 +29,3 @@ trackball_listener: trackball_listener {
     listeners = <&trackball_listener>;
 };
 
-&zip_temp_layer {
-    excluded-positions = <1 2 13 14 15 19 20 21 33 34 35>;
-};
