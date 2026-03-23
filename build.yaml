@@ -1,4 +1,4 @@
-include:j
+include:
   - board: bmp_boost
     shield: torabo_tsuki_lp_left
     snippet: studio-rpc-usb-uart
