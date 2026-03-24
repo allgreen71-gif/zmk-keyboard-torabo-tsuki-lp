@@ -5,14 +5,14 @@
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
     excluded-positions = <
-        2    //W
-        13    //A
-        14    //S
-        15    //D
+        //2    //W
+        //13    //A
+        //14    //S
+        //15    //D
         19    //J
         20    //K
-        33    //M
-        34    //,    これらのキー以外を押したら、AML解除
+        //33    //M
+        //34    //,    これらのキー以外を押したら、AML解除
     >;
 };
 
