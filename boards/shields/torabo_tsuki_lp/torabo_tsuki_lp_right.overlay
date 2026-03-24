@@ -2,6 +2,19 @@
 #include <input/processors.dtsi>
 #include <dt-bindings/zmk/input_transform.h>
 
+&zip_temp_layer {
+    excluded-positions = <
+        2    //W
+        13    //A
+        14    //S
+        15    //D
+        19    //J
+        20    //K
+        33    //M
+        34    //,
+    >;
+};
+
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
                        <&zip_temp_layer 1 10000>;
