@@ -3,9 +3,6 @@
 #define JP_YEN    0x89    //￥
 #define JP_PIPE    LS(0x89)    //│
 #define JP_UNDERSCORE   LS(0x87)    // _
-#define JP_KANA         LANGUAGE_1        // かな
-#define JP_EISU         LANGUAGE_2        // 英数
-#define JP_HANZEN       GRAVE             // 半角/全角
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -52,7 +49,7 @@
             bindings = <
 &none   &none       &none       &none   &none   &none                       &none         &none      &none          &none    &none    &none
 &trans  &kp F1      &kp F2      &kp F3  &kp F4  &kp F5                      &kp F6        &kp F7     &kp F8         &kp F9   &kp F10  &trans
-&trans  &kp N1      &kp N2      &kp N3  &kp N4  &kp N5      &none   &none   &kp NUMBER_6  &kp N7     &kp N8         &kp N9   &kp N0   &trans
+&trans  &kp N1      &kp N2      &kp N3  &kp N4  &kp N5      &none   &none   &kp NUMBER_6  &kp N7     &kp N8         &kp N9   &kp N0   &kp JP_UNDERSCORE
 &trans  &bt BT_PRV  &bt BT_NXT  &trans  &trans  &bt BT_CLR  &trans  &trans  &kp HOME      &kp PG_UP  &kp PAGE_DOWN  &kp END  &trans   &trans
 &trans  &trans      &trans      &trans  &trans  &trans      &trans  &trans  &trans        &none      &none          &trans   &trans   &trans
             >;
