@@ -18,9 +18,9 @@
 
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
-                       <&zip_temp_layer 4 100000>;    //トラックボールの操作があったらレイヤー１に
+                       <&zip_temp_layer 4 100000>;    //トラックボールの操作があったらレイヤー4に
 
-//スクロールレイヤー（レイヤー２の時にスクロール）
+//スクロールレイヤー（レイヤー1の時にスクロール）
 scroll_listener {
         layers = <1>;
         input-processors = <&zip_xy_scaler 1 3>
