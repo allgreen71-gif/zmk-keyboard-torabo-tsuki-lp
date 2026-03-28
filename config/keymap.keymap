@@ -22,6 +22,22 @@
         };
     };
 
+    macros {
+        l0g1n: l0g1n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp M &kp A &kp N &kp LS(O) &kp LS(F) &kp M &kp Y &kp W &kp O &kp R &kp D &kp UNDER>;
+            label = "L0G1N";
+        };
+
+        pass1n: pass1n {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp LS(Q) &kp A &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp UNDER>;
+            label = "PASS1N";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
