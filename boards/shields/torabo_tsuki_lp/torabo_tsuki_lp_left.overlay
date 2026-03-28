@@ -5,10 +5,4 @@
 &pointing_listener {
     input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
 
-//スクロールレイヤー（レイヤー２の時にスクロール）
-scroll_listener {
-        layers = <2>;
-        input-processors = <&zip_xy_scaler 1 3>
-        , <&zip_xy_to_scroll_mapper>;
-    };
 };
