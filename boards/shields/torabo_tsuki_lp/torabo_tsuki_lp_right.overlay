@@ -7,11 +7,11 @@
 &zip_temp_layer {
     require-prior-idle-ms = <200>;
     excluded-positions = <
-        19    //U
-        20    //I
-        21    //O
+        //19    //U
+        //20    //I
+        //21    //O
         33    //J
-        34    //K
+        //34    //K
         35    //L
         47    //M
         49    //.    これらのキー以外を押したら、AML解除
