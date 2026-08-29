@@ -60,7 +60,7 @@
         mail_nra: mail_nra {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp S &kp H &kp I &kp I &kp N &kp A &kp COLON &kp K &kp E &kp N &kp I &kp C &kp H &kp I &kp R &kp O &kp COLON &kp N5 &kp N &kp E &kp AT_SIGN &kp N &kp R &kp A &kp PERIOD &kp G &kp O &kp PERIOD &kp J &kp P>;
+            bindings = <&none &kp S &kp H &kp I &kp I &kp N &kp A &kp LS(0x87) &kp K &kp E &kp N &kp I &kp C &kp H &kp I &kp R &kp O &kp LS(0x87) &kp N5 &kp N &kp E &kp LEFT_BRACKET &kp N &kp R &kp A &kp PERIOD &kp G &kp O &kp PERIOD &kp J &kp P>;
             label = "MAIL_NRA";
         };
     };
