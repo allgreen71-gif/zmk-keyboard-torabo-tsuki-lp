@@ -56,6 +56,13 @@
             bindings = <&none &kp LS(Q) &kp A &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp LS(0x87)>;
             label = "PASS1N";
         };
+
+        mail_nra: mail_nra {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp S &kp H &kp I &kp I &kp N &kp A &kp COLON &kp K &kp E &kp N &kp I &kp C &kp H &kp I &kp R &kp O &kp COLON &kp N5 &kp N &kp E &kp AT_SIGN &kp N &kp R &kp A &kp PERIOD &kp G &kp O &kp PERIOD &kp J &kp P>;
+            label = "MAIL_NRA";
+        };
     };
 
     keymap {
@@ -63,11 +70,11 @@
 
         layer_0 {
             bindings = <
-&none                    &none     &none         &none        &none          &none                              &none      &none  &none      &none           &none                  &none
-&kp ESCAPE               &kp Q     &kp W         &kp E        &kp R          &kp T                              &kp Y      &kp U  &kp I      &kp O           &kp P                  &kp BSPC
-&kp TAB                  &kp A     &kp S         &kp D        &kp F          &kp G    &none        &none        &kp H      &kp J  &kp K      &kp L           &kp SEMICOLON          &lt 1 SINGLE_QUOTE
-&mt LSHFT LEFT_BRACKET   &kp Z     &kp X         &kp C        &kp V          &kp B    &kp DEL      &kp B        &kp N      &kp M  &kp COMMA  &kp PERIOD      &kp SLASH              &mt RIGHT_SHIFT LS(0x87)
-&mt LCTRL RIGHT_BRACKET  &kp LGUI  &kp LEFT_ALT  &lt 2 GRAVE  &kp BACKSPACE  &kp TAB  &lt 1 SPACE  &lt 2 SPACE  &kp ENTER  &none  &none      &kp LANGUAGE_1  &mt RIGHT_ALT INT_YEN  &mt LCTRL BACKSLASH
+&none                    &none     &none         &none        &none             &none                                       &none      &none  &none      &none           &none                  &none
+&kp ESCAPE               &kp Q     &kp W         &kp E        &kp R             &kp T                                       &kp Y      &kp U  &kp I      &kp O           &kp P                  &kp BSPC
+&kp TAB                  &kp A     &kp S         &kp D        &kp F             &kp G           &none        &none          &kp H      &kp J  &kp K      &kp L           &kp SEMICOLON          &lt 1 SINGLE_QUOTE
+&mt LSHFT LEFT_BRACKET   &kp Z     &kp X         &kp C        &kp V             &kp B           &kp DEL      &kp BACKSPACE  &kp N      &kp M  &kp COMMA  &kp PERIOD      &kp SLASH              &mt RIGHT_SHIFT LS(0x87)
+&mt LCTRL RIGHT_BRACKET  &kp LGUI  &kp LEFT_ALT  &lt 2 GRAVE  &kp LEFT_CONTROL  &kp LEFT_SHIFT  &lt 1 SPACE  &lt 2 SPACE    &kp ENTER  &none  &none      &kp LANGUAGE_1  &mt RIGHT_ALT INT_YEN  &mt LCTRL BACKSLASH
             >;
         };
 
@@ -94,7 +101,7 @@
         layer_3 {
             bindings = <
 &none   &none         &none         &none         &none         &none                             &none       &none         &none         &none         &none      &none
-&trans  &trans        &kp UP_ARROW  &trans        &l0g1n        &pass1n                           &kp ASTRK   &kp N7        &kp N8        &kp N9        &kp MINUS  &trans
+&trans  &trans        &kp UP_ARROW  &mail_nra     &l0g1n        &pass1n                           &kp ASTRK   &kp N7        &kp N8        &kp N9        &kp MINUS  &trans
 &trans  &kp LEFT      &kp DOWN      &kp RIGHT     &bt BT_PRV    &bt BT_NXT    &trans      &trans  &kp PERIOD  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS   &trans
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR  &trans  &kp N0      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp SLASH  &trans
 &trans  &trans        &trans        &trans        &trans        &trans        &trans      &trans  &trans      &none         &none         &trans        &trans     &trans
@@ -103,11 +110,11 @@
 
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &kp RC(X)  &kp RC(C)  &kp RC(V)  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &trans     &mkp MB5   &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans  &trans     &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB4   &trans  &mkp MB5   &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans     &trans  &trans
             >;
         };
     };
